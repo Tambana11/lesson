@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tayana book club</title>
     <style>
+        *{
+            // <uniquifier>:use a unique and drescriptive class name
+                //<weight>: use a value from 200 to 800
+
+            .parkinsans-<uniquifier>{
+                font-family: "parkinsans", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
+                font-style: normal;
+            }
+
+        }
         body {
             background-color: #eeeeee;
         }
@@ -172,6 +184,34 @@
         nav ul{
             display: flex;
             justify-content: space-between;
+        }
+        header{
+            grid-area: header;
+            
+        }
+        nav{
+            grid-area: nav;
+        }
+        #intro{
+            grid-area: intro;
+        }
+        #main-section{
+            grid-area: main-section;
+        }
+        #bestsellers{
+            grid-area: bestsellers;
+        }
+        footer{
+            grid-area: footer;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            grid-template-areas: 
+            "header header header header intro"
+            "nav nav nav nav intro"
+            "main-section main-section main-section main-section bestsellers"
+            "footer footer footer footer footer";
         }
     </style>
 </head>
